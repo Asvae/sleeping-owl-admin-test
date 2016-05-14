@@ -5,7 +5,7 @@ use Mockery as m;
 class AdminTest extends TestCase
 {
     /**
-     * @var Admin
+     * @var SleepingOwl\Admin\Admin
      */
     private $admin;
 
@@ -20,7 +20,7 @@ class AdminTest extends TestCase
      * @covers SleepingOwl\Admin\Admin::registerModel
      * @covers SleepingOwl\Admin\Admin::getModels
      */
-    public function registers_models()
+    public function test_registers_models()
     {
         $this->admin->registerModel('TestModel', function () { });
         $this->assertEquals(1, count($this->admin->getModels()));
@@ -50,7 +50,7 @@ class AdminTest extends TestCase
     {
         $this->markTestIncomplete('Function needs refactoring or clarification.');
 
-        $model = $this->admin->getModel();
+        $this->admin->getModel();
     }
 
     /**
@@ -65,6 +65,7 @@ class AdminTest extends TestCase
 
     /**
      * @covers SleepingOwl\Admin\Admin::template
+     * TODO This test fails. Something to do with request.
      */
     public function test_returns_template()
     {
