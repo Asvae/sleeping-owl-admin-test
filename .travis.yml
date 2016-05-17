@@ -12,3 +12,6 @@ before_script:
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist
+
+addons:
+  mariadb: '10.0'
