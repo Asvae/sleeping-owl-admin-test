@@ -1,7 +1,10 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -13,7 +16,8 @@
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "laravelrus/sleepingowl": "dev-development"
     },
     "autoload": {
         "classmap": [
@@ -23,6 +27,12 @@
             "App\\": "app/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/LaravelRUS/SleepingOwlAdmin"
+        }
+    ],
     "autoload-dev": {
         "classmap": [
             "tests/TestCase.php"
