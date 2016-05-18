@@ -7,6 +7,7 @@ php:
   - hhvm
 
 before_script:
+  - cp .env.travis .env
   - mysql -e 'create database travis;'
   - travis_retry composer self-update
   - php artisan migrate
